@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡¡Para mi niña bonita!!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="spotify-player">
+    <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/2haUnAutmygaJTob0ZPHEn?utm_source=generator&theme=0&view=coverart" 
+        width="100%" height="152" frameborder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+    </iframe>
+</div>
+
+    <header class="fade-header">
+        <h1>Holaaaa mi bonita!!</h1>
+        <p>Esto es un detallito hecho por mí, con mucho cariño</p>
+    </header>
+
+    <section id="fotos">
+        <h2>¡Nuestros lindos momentos!</h2>
+        <div class="foto-container">
+            <div class="foto-item">
+                <img src="fotos/nosotros.jpg" alt="Nosotros 1">
+                <button class="zoom-btn">🔍</button>
+            </div>
+            <div class="foto-item">
+                <img src="fotos/kiss.jpg" alt="Nosotros 2">
+                <button class="zoom-btn">🔍</button>
+            </div>
+            <div class="foto-item">
+                <img src="fotos/yomi.jpg" alt="Nosotros 3">
+                <button class="zoom-btn">🔍</button>
+            </div>
+        </div>
+
+        <h2>Mi mujer 🙈</h2>
+        <div class="foto-container">
+            <div class="foto-item">
+                <img src="fotos/mi mujer.jpg" alt="Nosotros 1.1">
+                <button class="zoom-btn">🔍</button>
+            </div>
+            <div class="foto-item">
+                <img src="fotos/ella.jpg" alt="Nosotros 1.2">
+                <button class="zoom-btn">🔍</button>
+            </div>
+            <div class="foto-item">
+                <img src="fotos/amor.jpg" alt="Nosotros 1.3">
+                <button class="zoom-btn">🔍</button>
+            </div>
+        </div>
+
+        <h2>Ali!!</h2>
+        <div class="foto-container">
+            <div class="foto-item">
+                <img src="fotos/blanca nieves.jpg" alt="Ella 1">
+                <button class="zoom-btn">🔍</button>
+            </div>
+            <div class="foto-item">
+                <img src="fotos/ali.jpg" alt="Ella 2">
+                <button class="zoom-btn">🔍</button>
+            </div>
+            <div class="foto-item">
+                <img src="fotos/jiji.jpg" alt="Ella 3">
+                <button class="zoom-btn">🔍</button>
+            </div>
+        </div>
+
+        <h2>¡Nuestros regalos!</h2>
+        <div class="foto-container">
+            <div class="foto-item">
+                <img src="fotos/flowers.jpg" alt="Regalos">
+                <button class="zoom-btn">🔍</button>
+            </div>
+            <div class="foto-item">
+                <img src="fotos/sorpresa.jpg" alt="Regalos">
+                <button class="zoom-btn">🔍</button>
+            </div>
+        </div>
+
+        <h2>Our dates!!</h2>
+        <div class="foto-container">
+            <div class="foto-item">
+                <img src="fotos/date.jpg" alt="Date">
+                <button class="zoom-btn">🔍</button>
+            </div>
+            <div class="foto-item">
+                <img src="fotos/date 2.jpg" alt="Date">
+                <button class="zoom-btn">🔍</button>
+            </div>
+        </div>
+
+        <h2>Yoo!!</h2>
+        <div class="foto-container">
+            <div class="foto-item">
+                <img src="fotos/preparatoriano.jpg" alt="Yo">
+                <button class="zoom-btn">🔍</button>
+            </div>
+            <div class="foto-item">
+                <img src="fotos/espejo.jpg" alt="Yo">
+                <button class="zoom-btn">🔍</button>
+            </div>
+            <div class="foto-item">
+                <img src="fotos/yoo.jpg" alt="Yo">
+                <button class="zoom-btn">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="mensaje">
+        <h2>Un mensaje para ti!!</h2>
+        <p>¡¡Gracias por pertenecer en mi vida y ser parte de ella, cada día contigo es inolvidable y especial!!</p>
+        <p id="contador"></p>
+    </section>
+
+    <footer>
+        <p>Creado con amor por mí</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="imgModal" alt="Imagen ampliada">
+    </div>
+
+    <div class="music-player">
+        <img src="" alt="">
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+
+<div class="upload">
+    <input type="file" id="audioFile" accept="audio/*">
+    <input type="file" id="coverFile" accept="image/*">
+    <input type="text" id="songName" placeholder="Nombre de la canción">
+    <input type="text" id="artistName" placeholder="Artista">
+    <button id="uploadBtn">Subir canción</button>
+</div>
+
+<div class="playlist"></div>
+<script src="contador.js"></script>
+</body>
+</html>
